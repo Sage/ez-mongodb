@@ -17,6 +17,6 @@ npm install ez-mongodb
 See the [API reference](API.md).
 
 <a name="license"/>
-# License
+## License
 
 This work is licensed under the terms of the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
