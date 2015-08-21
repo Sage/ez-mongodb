@@ -2,7 +2,7 @@
 QUnit.module(module.id);
 
 var ez = require('ez-streams');
-var MongoClient = require('streamline-mongodb').MongoClient;
+var MongoClient = require('mongodb').MongoClient;
 
 var URL_PREFIX = "mongodb://" + (process.env.MONGO_HOST || "localhost") + ":" + (process.env.MONGO_PORT || 27017);
 
