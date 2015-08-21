@@ -2,6 +2,7 @@
   "name": "ez-mongodb",
   "description": "ez-streams for Mongo DB",
   "version": "0.1.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/Sage/ez-mongodb.git"
