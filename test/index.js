@@ -1,5 +1,4 @@
 "use strict";
-
 var fs = require('fs');
 var fsp = require('path');
 
