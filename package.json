@@ -1,7 +1,7 @@
 {
   "name": "ez-mongodb",
   "description": "ez-streams for Mongo DB",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "author": {
     "name": "Bruno Jouhier"
@@ -22,12 +22,14 @@
   "dependencies": {
     "mongodb": "^2.0.48",
     "streamline-runtime": "^1.0.15",
-    "ez-streams": "^1.2.1"
+    "ez-streams": "^2.0.0"
   },
   "devDependencies": {
-    "babel-core": "^5.8.25",
-    "babel-plugin-streamline": "^1.0.8",
-    "qunit": "^0.7.7"
+    "babel-core": "^6.3.17",
+    "babel-plugin-streamline": "^2.0.0",
+    "babel-preset-es2015": "^6.3.13",
+    "qunit": "^0.7.7",
+    "streamline-helpers": "^2.0.0"
   },
   "scripts": {
     "prepublish": "node build.js || nodejs build.js",
