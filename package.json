@@ -32,7 +32,7 @@
     "streamline-helpers": "^2.0.0"
   },
   "scripts": {
-    "prepublish": "node build.js || nodejs build.js",
+    "prepare": "node build.js || nodejs build.js",
     "test": "node test-callbacks"
   },
   "main": "index.js"
