@@ -11,10 +11,12 @@
     "url": "git://github.com/Sage/ez-mongodb.git"
   },
   "ez": {
-    "factories": [{
+    "factories": [
+      {
         "protocol": "mongodb",
         "module": "ez-mongodb/factory"
-    }]          
+      }
+    ]
   },
   "engines": {
     "node": ">=0.12.0"
