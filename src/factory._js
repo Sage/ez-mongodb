@@ -7,9 +7,9 @@ var MongoClient = require('mongodb').MongoClient;
 function _mongoOptions(options) {
     // take relevant options from options
     return {			
-        db: {
-		  w: 1
-		}
+        w: 1,
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     };
 }
 
@@ -19,8 +19,8 @@ function _getCollection(_, url, options) {
     var dbUrl = segs.slice(0,4).join("/");
     // TODO: extract connect options from url query
     var connectOpt = _mongoOptions(options);
-    var db = MongoClient.connect(dbUrl, connectOpt, _);
-    return db.collection(segs[4], _);
+    var client = MongoClient.connect(dbUrl, connectOpt, _);
+    return client.db().collection(segs[4], _);
 }
 
 function _parseQuery(url) {

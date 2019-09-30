@@ -7,8 +7,12 @@ var MongoClient = require('mongodb').MongoClient;
 var URL_PREFIX = "mongodb://" + (process.env.MONGO_HOST || "localhost") + ":" + (process.env.MONGO_PORT || 27017);
 
 asyncTest("initialize database", 0, function(_) {
-    var db = MongoClient.connect(URL_PREFIX + "/unit_test", _);
-    db.dropDatabase(_);
+    var client = MongoClient.connect(URL_PREFIX, {
+        w: 1,
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }, _);
+    client.db('unit_test').dropDatabase(_);
     
     start();
 });

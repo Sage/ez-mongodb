@@ -11,7 +11,7 @@ module.exports = {
 	/// * `reader = ezmongo.reader(cursor)`  
 	reader: function(cursor) {
 		return generic.reader(function(_) {
-			var obj = cursor.nextObject(_);
+			var obj = cursor.next(_);
 			return obj == null ? undefined : obj;
 		});
 	},
@@ -23,13 +23,13 @@ module.exports = {
 			if (obj === undefined) done = true;
 			if (!done) {
 				if (options.upsert) {
-					collection.update({
+					collection.updateOne({
 						_id: obj._id
 					}, obj, {
 						upsert: true
 					}, _);
 				} else {
-					collection.insert(obj, _);
+					collection.insertOne(obj, _);
 				}
 			}
 		});
