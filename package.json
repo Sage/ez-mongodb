@@ -22,9 +22,9 @@
     "node": ">=0.12.0"
   },
   "dependencies": {
-    "mongodb": "^3.3.2",
-    "streamline-runtime": "^1.0.15",
-    "ez-streams": "^3.0.0"
+    "ez-streams": "^3.0.0",
+    "mongodb": "^3.3.3",
+    "streamline-runtime": "^1.0.15"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
